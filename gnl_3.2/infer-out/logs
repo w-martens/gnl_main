@@ -1,0 +1,45 @@
+[36507][environment] CWD = /Users/wmartens/Work/gnl_main/gnl_3
+[36507][environment] No .inferconfig file found
+[36507][environment] Project root = /Users/wmartens/Work/gnl_main/gnl_3
+[36507][environment] INFER_ARGS =   @/var/folders/zz/zyxvpxvq6csfxvn_n0007t94001yk9/T/args.tmp.328586
+[36507][environment]   ++Contents of '/var/folders/zz/zyxvpxvq6csfxvn_n0007t94001yk9/T/args.tmp.328586':
+[36507][environment]     run
+[36507][environment]   
+[36507][environment] command line arguments:   infer run -- gcc -c get_next_line.c
+[36507][environment]                           get_next_line_utils.cActive checkers: biabduction (C/C++/ObjC, Java), fragment retains view (Java), inefficient keyset iterator (Java), liveness (C/C++/ObjC), RacerD (C/C++/ObjC, Java), SIOF (C/C++/ObjC), uninitialized variables (C/C++/ObjC), Starvation analysis (C/C++/ObjC, Java)
+[36507][environment] Infer log identifier is 
+Infer version v0.17.0
+[36507][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[36507][environment] 
+[36507][   progress] Capturing in make/cc mode...
+[36507][      debug] 
+[36507][      debug] *** Beginning capture of file /Users/wmartens/Work/gnl_main/gnl_3/get_next_line.c ***
+[36507][      debug] Clang frontend action is translating and linting
+[36507][      debug] Loading the following linters files: /Users/wmartens/.brew/Cellar/infer/0.17.0_1/lib/infer/infer/bin/../lib/linter_rules/linters.al
+[36507][      debug] Elapsed: 78.055ms.
+[36507][      debug] 
+[36507][      debug] *** Beginning capture of file /Users/wmartens/Work/gnl_main/gnl_3/get_next_line_utils.c ***
+[36507][      debug] Clang frontend action is translating and linting
+[36507][      debug] Loading the following linters files: /Users/wmartens/.brew/Cellar/infer/0.17.0_1/lib/infer/infer/bin/../lib/linter_rules/linters.al
+[36507][      debug] Elapsed: 72.883ms.
+[36507][      debug] 
+[36507][   progress] Found 2 source files to analyze in /Users/wmartens/Work/gnl_main/gnl_3/infer-out
+[36507][environment] Parallel jobs: 4
+[36516][   progress] get_next_line_utils.c starting
+[36517][   progress] get_next_line.c starting
+[36516][   progress] get_next_line_utils.c DONE
+[36517][   progress] get_next_line.c DONE
+[36507][   progress] 
+[36507][   progress] Analysis finished in 1.546ss
+[36507][      debug] collected stats:
+[36507][      debug] Backend stats:
+[36507][      debug]   summary_file_try_load= 114
+[36507][      debug]   summary_read_from_disk= 5
+[36507][      debug]   summary_cache_hits= 1780 (96%)
+[36507][      debug]   summary_cache_misses= 59
+[36507][      debug]   summary_has_model_queries= 0
+[36507][      debug]   ondemand_procs_analyzed= 11
+[36507][      debug]   ondemand_local_cache_hits= 309 (93%)
+[36507][      debug]   ondemand_local_cache_misses= 20
+[36507][      debug]   
+[36507][      debug] 

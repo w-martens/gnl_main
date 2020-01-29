@@ -6,7 +6,7 @@
 #    By: wmartens <wmartens@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2019/12/06 17:49:19 by wmartens       #+#    #+#                 #
-#    Updated: 2020/01/15 12:56:26 by wmartens      ########   odam.nl          #
+#    Updated: 2020/01/16 11:07:30 by wmartens      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ SRC = 	get_next_line.c\
 all: $(NAME)
 
 $(NAME):
-	gcc -Wall -Wextra -Werror $(SRC) -o $(NAME) -I $(HEAD)
+	gcc -Wall -Wextra -Werror $(SRC) -o $(NAME) $(HEAD)
 
 clean:
 	rm -f $(NAME)
@@ -36,6 +36,6 @@ re: clean all
 run: clean all runno
 
 debuggo:
-	gcc -g -Wall -Wextra -Werror $(SRC) -o $(NAME) -I $(HEAD)
+	gcc -g -Wall -Wextra -Werror $(SRC) -o $(NAME) $(HEAD)
 
 debug: clean dbclean debuggo

@@ -6,7 +6,7 @@
 /*   By: wmartens <wmartens@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/01/08 19:18:57 by wmartens       #+#    #+#                */
-/*   Updated: 2020/01/15 18:53:44 by wmartens      ########   odam.nl         */
+/*   Updated: 2020/01/28 14:03:16 by wmartens      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,25 +87,19 @@ static int		get_line(int fd, char **rmd, char **res)
 
 int		get_next_line(int fd, char **line)
 {
-	static char	*rmd[OPEN_MAX];
-	char		*res;
+	static char	*rmd[1024];
 	int			ret;
 
-	if (fd < 0 || read(fd, 0, 0) < 0)
+	*line = ft_strdup("");
+	if (*line == NULL)
 		return (-1);
-	res = ft_strdup("");
-	if (res == NULL)
-		return (free_f(res, -1));
-	ret = get_line(fd, &rmd[fd], &res);
+	ret = get_line(fd, &rmd[fd], line);
 	if (ret > 0)
-	{
-		*line = ft_strdup(res);
-		return (free_f(res, 1));
-	}
+		return (1);
 	if (ret == 0)
 	{
-		*line = ft_strdup(res);
-		return (free_f(res, 0));
+		rmd[fd][0] = '\0';
+		return (0);
 	}
-	return (free_f(res, -1));
+	return (-1);
 }
